@@ -7,8 +7,8 @@ const HomePage = () => {
   const [productList, setProductList] = useState<TProduct[]>([])
 
   useEffect(() => {
-    window
-      .fetch('/api/avo')
+    
+      fetch('/api/avo')
       .then((response) => response.json())
       .then(({ data }: TAPIAvoResponse) => {
         setProductList(data)
